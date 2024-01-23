@@ -1,5 +1,12 @@
 package edu.menuClinica.servicios;
 
-public interface EsclavoInterfaz {
+import java.util.List;
 
+import dtos.EsclavoDto;
+import java.util.Scanner;
+
+public interface EsclavoInterfaz {
+	
+	public void registroEsclavo(List<EsclavoDto>listaAntigua);
+	public EsclavoDto crearNuevoEsclavo();
 }

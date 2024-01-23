@@ -60,10 +60,10 @@ public class Inicio {
     		  //break se usa para salir de la estructura donde nos encontramos, que salga del switch y vuelva apreguntar que 
     		  // opcion se quiere hacer ahora
     	  case 1:
-    		  System.out.print("[INFO] - Se ejecuta caso 1");
+    		  System.out.print("Añadir nuevo paciente");
     		  break;
     	  case 2:
-    		  System.out.print("[INFO] - Se ejecuta caso 2");
+    		  System.out.print("Crear cuenta titular");
     		  break;
     	  case 3:
     		  

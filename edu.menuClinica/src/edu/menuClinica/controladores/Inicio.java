@@ -1,10 +1,15 @@
 
 package edu.menuClinica.controladores;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
+import dtos.PacienteDto;
 import edu.menuClinica.servicios.MenuImplementacion;
 import edu.menuClinica.servicios.MenuInterfaz;
+import edu.menuClinica.servicios.OperativaImplementacion;
+import edu.menuClinica.servicios.OperativaInterfaz;
 
 
 
@@ -25,21 +30,35 @@ public class Inicio {
  */
 	public static void main(String[] args) {
 		
+		PacienteDto paciente1= new PacienteDto();
+		System.out.println(paciente1.toString());
+		paciente1.setNombrePaciente("Jaqueline");
+		System.out.println(paciente1.getNombrePaciente());
+		
+		List<PacienteDto> listaPaciente = new ArrayList <PacienteDto> ();
+		ArrayList <PacienteDto> arraylistPaciente = new ArrayList<PacienteDto>();
+		PacienteDto[]arrayPaciente= new PacienteDto [100];
+		
+		
+		MenuInterfaz mi = new MenuImplementacion ();
+		boolean cerrarMenu = false; 
 		int seleccionUsuario;
-      boolean cerrarMenu = false; 
+		
       Scanner comunicacionTecladoM = new Scanner(System.in);
-      MenuInterfaz mi = new MenuImplementacion ();
-
-      
+       
       while(!cerrarMenu) {
     	  
     	  seleccionUsuario = mi.mostrarMenuYSeleccion(comunicacionTecladoM); 
     	  
     	  switch(seleccionUsuario) {
+    	  // estructura switch parte de una variable que depende de opcion seleccionada, el case que cumpla la condicion
+    	  // será el case en el que entre
     	  case 0:
     		  System.out.print("[INFO] - Se ejecuta caso 0");
     		  cerrarMenu = true;
     		  break;
+    		  //break se usa para salir de la estructura donde nos encontramos, que salga del switch y vuelva apreguntar que 
+    		  // opcion se quiere hacer ahora
     	  case 1:
     		  System.out.print("[INFO] - Se ejecuta caso 1");
     		  break;
@@ -47,7 +66,8 @@ public class Inicio {
     		  System.out.print("[INFO] - Se ejecuta caso 2");
     		  break;
     	  case 3:
-    		  System.out.print("[INFO] - Se ejecuta caso 3");
+    		  
+    		  
     		  break;
     	  case 4:System.out.print("[INFO] - Se ejecuta caso 4");
     		  break;

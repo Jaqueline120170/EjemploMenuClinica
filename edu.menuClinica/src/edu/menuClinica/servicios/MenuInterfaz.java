@@ -12,7 +12,7 @@ public interface MenuInterfaz {
 	/**
 	 * Mostrar el menu al usuario y que recoja la opcion
 	 * @author jrt - 3102023
-	 * @return (in) el número de acción que selecciona el usuario
+	 * @return (int) el número de acción que selecciona el usuario
 	 */
 	public int mostrarMenuYSeleccion(Scanner comunicacionTecladoM);
 	

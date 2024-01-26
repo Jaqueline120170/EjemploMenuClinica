@@ -1,12 +1,13 @@
 package dtos;
 
 public class EsclavoDto {
-	
+	long idEsclavo;
 	String nombreEsclavo;
 	String apellidosEsclavo;
 	String tlfEsclavo;
 	
-	long idEsclavo;
+	
+	
 	public long getIdEsclavo() {
 		return idEsclavo;
 	}

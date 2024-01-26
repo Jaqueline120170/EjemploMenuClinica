@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import dtos.EsclavoDto;
 import dtos.PacienteDto;
 import edu.menuClinica.servicios.MenuImplementacion;
 import edu.menuClinica.servicios.MenuInterfaz;
@@ -29,15 +30,17 @@ public class Inicio {
  * @param args
  */
 	public static void main(String[] args) {
-		
+		/**
 		PacienteDto paciente1= new PacienteDto();
 		System.out.println(paciente1.toString());
 		paciente1.setNombrePaciente("Jaqueline");
 		System.out.println(paciente1.getNombrePaciente());
+		*/
 		
 		List<PacienteDto> listaPaciente = new ArrayList <PacienteDto> ();
-		ArrayList <PacienteDto> arraylistPaciente = new ArrayList<PacienteDto>();
-		PacienteDto[]arrayPaciente= new PacienteDto [100];
+		List<EsclavoDto> listaEsclavos = new ArrayList <EsclavoDto>();
+		//ArrayList <PacienteDto> arraylistPaciente = new ArrayList<PacienteDto>();
+		//PacienteDto[]arrayPaciente= new PacienteDto [100];
 		
 		
 		MenuInterfaz mi = new MenuImplementacion ();
@@ -66,7 +69,6 @@ public class Inicio {
     		  System.out.print("Crear cuenta titular");
     		  break;
     	  case 3:
-    		  
     		  
     		  break;
     	  case 4:System.out.print("[INFO] - Se ejecuta caso 4");

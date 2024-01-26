@@ -9,49 +9,45 @@ import java.util.Scanner;
 public class PacienteImplementacion implements PacienteInterfaz {
 	
 	Scanner comunicacionTecladoM = new Scanner(System.in);
+	EsclavoInterfaz ei = new EsclavoImplementacion();
 
-	public void registroPaciente (List<PacienteDto> listaAntigua){
+	public  void registroPaciente(List<PacienteDto> listaPacientes, List<EsclavoDto>listaEsclavos){
 		
-		
-		long idPaciente;
-		String nombrePaciente="aaaaa";
-		int edadPaciente=0;
-		String fchNacimientoPaciente="9999 12 31";
-		char sexoBiologicoPaciente='a';
-		String especiePaciente="aaaaa";
-		long idEsclavo;
+		PacienteDto pacienteNuevo = new PacienteDto();
 		
 		System.out.println("Introduzca el id del paciente: ");
-		idPaciente = comunicacionTecladoM.nextLong();
+		long idPaciente = comunicacionTecladoM.nextLong();
 		System.out.println("Introduzca el nombre del paciente: ");
-		nombrePaciente = comunicacionTecladoM.next();
+		String nombrePaciente = comunicacionTecladoM.next();
 		System.out.println("Introduzca la edad del paciente: ");
-		edadPaciente = comunicacionTecladoM.nextInt();
+		int edadPaciente = comunicacionTecladoM.nextInt();
 		System.out.println("Introduzca la fecha de nacimiento del paciente: ");
-		fchNacimientoPaciente= comunicacionTecladoM.next();
-		System.out.println("Introduzca el sexo del paciente: ");
-		sexoBiologicoPaciente = comunicacionTecladoM.next().charAt(0);
+		String fchNacimientoPaciente= comunicacionTecladoM.next();
+		System.out.println("Introduzca el sexo del paciente (M/F): ");
+		char sexoBiologicoPaciente = comunicacionTecladoM.next().charAt(0);
 		System.out.println("Introduzca la especie del paciente: ");
-		especiePaciente = comunicacionTecladoM.next();
-		System.out.println("Introduzca su id: " );
-		idEsclavo = comunicacionTecladoM.nextLong();
-		
-		return new Object PacienteDto(long idPaciente, String nombrePaciente, int edadPaciente, String fchNacimientoPaciente, char sexoBiologicoPaciente,String especiePaciente,long idEsclavo);
+		String especiePaciente = comunicacionTecladoM.next();
+		System.out.println("Introduzca el id Esclavo  " );
+		long idEsclavo = comunicacionTecladoM.nextLong();
+		 
+		PacienteDto paciente = new PacienteDto(idPaciente, nombrePaciente, edadPaciente, fchNacimientoPaciente,sexoBiologicoPaciente, especiePaciente,idEsclavo);
 		
 	}
+
 	
-	public void validacionPaciente (List<PacienteDto> listaAntigua) {
-		EsclavoInterfaz ei = new EsclavoImplementacion();
+	public void validacionPaciente (List<EsclavoDto> listaEsclavos,List<PacienteDto> listaPacientes ) {
 		
-		for(Object PacienteDto:listaAntigua) {
+		boolean existeEsclavo;
+		for(Object EsclavoDto:listaEsclavos) {
 			
-			if(!existePaciente(idPaciente){
+			
+			if(!existeEsclavo == esclavoNuevo.getidEsclavo){
 				
-				registroPaciente(listaAntigua);
+				ei.registroEsclavo(listaEsclavos);
 			}
 			else {
-				System.out.println("El paciente ya existe en la lista.");
-				registroPaciente();
+				System.out.println("El esclavo ya existe en la lista.");
+				registroPaciente(List<PacienteDto>listaPacientes);
 
 			}
 		}
@@ -59,4 +55,5 @@ public class PacienteImplementacion implements PacienteInterfaz {
 			
 	}
 
-}
+
+	

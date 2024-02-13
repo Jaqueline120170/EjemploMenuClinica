@@ -14,6 +14,8 @@ public class EsclavoImplementacion implements EsclavoInterfaz {
 	}
 
 	public EsclavoDto crearNuevoEsclavo() {
+		
+		EsclavoDto esclavoNuevo= new EsclavoDto();
 		long idEsclavo;
 		String nombreEsclavo;
 		String apellidosEsclavo;
@@ -28,8 +30,8 @@ public class EsclavoImplementacion implements EsclavoInterfaz {
 		System.out.println("Introduzca su telefono: ");
 		tlfEsclavo = comunicacionTecladoM.next();
 		
-		EsclavoDto esclavoNuevo= new EsclavoDto(idEsclavo,nombreEsclavo, apellidosEsclavo, tlfEsclavo);
+		EsclavoDto esclavo= new EsclavoDto(idEsclavo,nombreEsclavo, apellidosEsclavo, tlfEsclavo);
 		
-		return esclavoNuevo;
+		return esclavo;
 	}
 }
